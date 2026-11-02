@@ -7,7 +7,7 @@ import { IArrow } from "@/components/icons";
 export const metadata = meta({
   title: "Sektörlere Göre Servis | Öztiryakiler Teknik",
   absolute: true,
-  description: "Restoran, otel, yemekhane, pastane, fast food ve catering mutfakları için Öztiryakiler ekipman servisi ve işletmeye özel bakım takvimleri.",
+  description: "Restoran, otel, yemekhane, okul kantini, gemi ve askeri kurum mutfakları için Öztiryakiler ekipman servisi ve işletmeye özel bakım takvimleri.",
   path: "/sektorler",
 });
 
@@ -36,7 +36,7 @@ export default function Sectors() {
           </ul>
         </div>
       </section>
-      <DarkBand title="İşletmeniz listede yok mu?" text="Kafe, kantin, kreş, spor tesisi; ticari mutfağı olan her işletmeye hizmet veriyoruz." />
+      <DarkBand title="İşletmeniz listede yok mu?" text="Kreş, hastane, spor tesisi; ticari mutfağı olan her işletmeye hizmet veriyoruz." />
     </>
   );
 }

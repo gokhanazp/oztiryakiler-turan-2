@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { deviceImages } from "@/data/deviceImages";
 import { notFound } from "next/navigation";
 import { devices, getDevice } from "@/data/devices";
 import { guidesFor } from "@/data/guides";
@@ -24,12 +26,20 @@ export default async function DevicePage({ params }: P) {
   const path = `/servis/${d.slug}`;
   const crumbs = [{ name: "Anasayfa", path: "/" }, { name: "Servisler", path: "/servis" }, { name: `${d.name} servisi`, path }];
   const related = guidesFor(d.slug);
+  const img = deviceImages[d.slug];
   const usedIn = sectors.filter((s) => s.critical.includes(d.slug));
 
   return (
     <>
       <Ld data={[serviceLd(d.h1, d.metaDescription, path, d.scope), crumbLd(crumbs), qaLd(d.qa)]} />
-      <PageTop kicker="Servis" title={d.h1} lead={d.lead} crumbs={crumbs}>
+      <PageTop kicker="Servis" title={d.h1} lead={d.lead} crumbs={crumbs} aside={img && (
+        <figure className="relative mx-auto w-full max-w-[400px]">
+          <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[16px] border-2 border-ink bg-white p-6 shadow-[6px_6px_0_#ffc21a]">
+            <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority sizes="(min-width:1024px) 400px, 90vw" className={`h-auto object-contain ${img.w < 450 ? "w-[78%]" : "w-full"}`} />
+          </div>
+          <figcaption className="absolute -bottom-3 left-5 rounded-full bg-sun px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.15em] text-ink">Öztiryakiler {d.name}</figcaption>
+        </figure>
+      )}>
         <CallButtons className="mt-7" />
       </PageTop>
 

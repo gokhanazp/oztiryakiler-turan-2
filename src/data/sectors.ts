@@ -144,6 +144,75 @@ export const sectors: Sector[] = [
       { period: "Yılda bir", items: ["Gaz hattı sızdırmazlık testi", "Fırın genel bakımı"] },
     ],
   },
+  {
+    slug: "gemi-mutfaklari",
+    name: "Gemi Mutfakları",
+    h1: "Gemi Mutfakları İçin Öztiryakiler Ekipman Servisi",
+    metaTitle: "Gemi Mutfağı Ekipman Servisi – Öztiryakiler",
+    metaDescription: "Limanda veya tersanede bulunan gemilerin kuzinelerindeki Öztiryakiler ocak, fırın, fritöz ve soğutma cihazlarına yerinde onarım ve sefer öncesi bakım.",
+    lead: "Bir gemi kuzinesinde arızalı cihazın yedeği çoğu zaman yoktur ve sefer başladıktan sonra teknisyen çağırmak mümkün değildir. Bu yüzden gemi mutfaklarında asıl iş, gemi limandayken arızayı kapatmak ve sefere hazır hale getirmektir.",
+    context: [
+      "Gemi mutfaklarında cihazlar dar bir alana sabitlenmiş, sürekli titreşime ve tuzlu, nemli havaya maruz kalır. Bu koşullar kara mutfaklarına göre bağlantı noktalarında gevşemeye, elektrik terminallerinde oksitlenmeye ve paslanmaz yüzeylerde korozyona daha hızlı yol açar.",
+      "Ambarlı Limanı, Karaköy ve Sarayburnu rıhtımları, Haliç tersaneleri ve Avrupa Yakası marinalarında bağlı duran gemilere, kaptanlık ya da acente üzerinden alınan izinle yerinde servis veriyoruz. Liman giriş prosedürü için teknisyen bilgilerini önceden iletiyoruz.",
+    ],
+    critical: ["oztiryakiler-ocak-servisi", "oztiryakiler-firin-servisi", "oztiryakiler-buzdolabi-servisi", "oztiryakiler-fritoz-servisi", "oztiryakiler-bulasik-makinesi-servisi"],
+    risks: [
+      { t: "Titreşimle gevşeyen bağlantılar", d: "Ocak ve fırınlarda gaz, elektrik ve su bağlantıları titreşimle gevşeyebilir; sefer öncesi sıkılık kontrolü şart." },
+      { t: "Tuz ve nemden kaynaklı korozyon", d: "Elektrik terminalleri, termostat kontakları ve fan motorları kara mutfaklarına göre daha hızlı yıpranır." },
+      { t: "Seferde soğutma kaybı", d: "Kumanya dolabının seferde arızalanması tüm erzağı riske atar; kompresör ve fan kontrolü limanda yapılmalı." },
+    ],
+    plan: [
+      { period: "Her sefer öncesi", items: ["Bağlantı ve sabitleme kontrolü", "Soğutma sıcaklık ve fan testi", "Ocak ateşleme ve emniyet kontrolü"] },
+      { period: "3 ayda bir", items: ["Elektrik terminali temizliği ve sıkılığı", "Fırın contası ve fan kontrolü", "Bulaşık makinesi kireç sökümü"] },
+      { period: "Tersane / havuz dönemi", items: ["Genel ekipman revizyonu", "Yıpranan parça değişimi", "Soğutma gaz basınç kontrolü"] },
+    ],
+  },
+  {
+    slug: "askeri-mutfaklar",
+    name: "Askeri Kurum Mutfakları",
+    h1: "Askeri Kurum Mutfakları İçin Öztiryakiler Ekipman Servisi",
+    metaTitle: "Askeri Mutfak Ekipman Servisi – Öztiryakiler",
+    metaDescription: "Askeri birlik ve kurum mutfaklarındaki Öztiryakiler yer ocağı, kazan, fırın ve soğutma ekipmanlarına kurum prosedürüne uygun yerinde servis ve bakım.",
+    lead: "Askeri kurum mutfakları günde üç öğün, yüzlerce hatta binlerce kişiye aynı saatte yemek çıkarır. Yemek saati ertelenemediği için arızaya hızlı müdahale kadar, arızayı önleyen düzenli bakım da önemlidir.",
+    context: [
+      "Bu mutfaklarda yük, büyük hacimli pişirmede toplanır: yer ocakları ve kazanlar, çok gözlü ocaklar, büyük fırınlar ve tabak devri yüksek bulaşık makineleri. Soğuk depolar ve buzdolapları ise toplu erzak saklandığı için sürekli tam kapasite çalışır.",
+      "Kurum içine giriş izinli olduğu için teknisyen kimlik bilgilerini ve araç bilgisini önceden iletiyor, belirlenen saatte ve refakatle çalışıyoruz. Her ziyaret sonunda yapılan işlemleri, değişen parçaları ve önerileri içeren yazılı servis formu bırakıyor, faturalı çalışıyoruz.",
+    ],
+    critical: ["oztiryakiler-yer-ocagi-servisi", "oztiryakiler-ocak-servisi", "oztiryakiler-firin-servisi", "oztiryakiler-bulasik-makinesi-servisi", "oztiryakiler-buzdolabi-servisi"],
+    risks: [
+      { t: "Yemek saatinde kazan arızası", d: "Yer ocağı brülörü ya da gaz vanası arızası tüm öğünü etkiler; brülör temizliği ve vana kontrolü düzenli yapılmalı." },
+      { t: "Bulaşık hattının durması", d: "Yüksek tabak devrinde boyler ve pompa arızası hattı kilitler; kireç sökümü ihmal edilmemeli." },
+      { t: "Toplu erzakta soğutma kaybı", d: "Büyük hacimli dolaplarda kapasite düşüşü fark edilmeden ilerleyebilir; sıcaklık kaydı tutulmalı." },
+    ],
+    plan: [
+      { period: "Aylık", items: ["Yer ocağı ve ocak brülör temizliği", "Soğutma sıcaklık ve kondenser kontrolü", "Bulaşık makinesi pompa ve rezistans kontrolü"] },
+      { period: "3 ayda bir", items: ["Gaz hattı sızdırmazlık testi", "Fırın termostat ve fan kontrolü", "Kireç sökümü"] },
+      { period: "Yılda bir", items: ["Tüm ekipmanın genel revizyonu", "Yıpranan parçaların planlı değişimi", "Yazılı durum raporu"] },
+    ],
+  },
+  {
+    slug: "okul-kantinleri",
+    name: "Okul Kantinleri ve Yemekhaneleri",
+    h1: "Okul Kantinleri İçin Öztiryakiler Ekipman Servisi",
+    metaTitle: "Okul Kantini Ekipman Servisi – Öztiryakiler",
+    metaDescription: "Okul kantini ve yemekhanelerindeki Öztiryakiler ocak, fritöz, benmari, tost ve soğutma cihazlarına yerinde onarım, tatil döneminde planlı bakım.",
+    lead: "Okul kantininde yoğunluk teneffüslere ve öğle arasına sıkışır; 10–15 dakikalık bir arada yüzlerce öğrenciye servis verilir. Bu yüzden bir dolabın ya da benmarinin durması o günün satışını ve öğrencilerin öğle yemeğini doğrudan etkiler.",
+    context: [
+      "Kantinlerde en çok kullanılan cihazlar tezgah tipi buzdolapları ve içecek dolapları, sıcak yiyecek benmarileri, ızgara ve fritözdür. Yemekhanesi olan okullarda ise ocak, fırın, makarna haşlama ve bulaşık makinesi devreye girer.",
+      "Okul mutfaklarında öğrenci güvenliği nedeniyle onarımları ders saatleri dışında ya da öğrencilerin mutfağa erişemediği zamanlarda yapıyoruz. Yarıyıl ve yaz tatillerini, cihazların kapsamlı bakımı ve yeni döneme hazırlanması için en uygun zaman olarak öneriyoruz.",
+    ],
+    critical: ["oztiryakiler-buzdolabi-servisi", "oztiryakiler-benmari-servisi", "oztiryakiler-fritoz-servisi", "oztiryakiler-izgara-servisi", "oztiryakiler-makarna-haslama-servisi"],
+    risks: [
+      { t: "Teneffüste soğutma arızası", d: "İçecek ve sandviç dolaplarının ısınması hem satış kaybı hem gıda güvenliği riski demektir." },
+      { t: "Benmaride sıcaklık düşmesi", d: "Öğle servisinde yemeklerin yeterli sıcaklıkta tutulamaması; rezistans ve termostat kontrolü gerekir." },
+      { t: "Uzun tatil sonrası çalışmayan cihaz", d: "Aylarca kapalı kalan cihazlarda conta kuruması, kireç ve toz birikimi açılışta arıza çıkarır." },
+    ],
+    plan: [
+      { period: "Dönem başı", items: ["Tüm cihazların açılış kontrolü", "Soğutma sıcaklık testi", "Gaz ve elektrik bağlantı kontrolü"] },
+      { period: "Dönem ortası", items: ["Kondenser temizliği", "Fritöz ve ızgara termostat kontrolü", "Benmari rezistans kontrolü"] },
+      { period: "Yaz tatili", items: ["Genel bakım ve kireç sökümü", "Yıpranan conta ve parçaların değişimi", "Kapatma öncesi koruma işlemleri"] },
+    ],
+  },
 ];
 
 export const getSector = (slug: string) => sectors.find((s) => s.slug === slug);

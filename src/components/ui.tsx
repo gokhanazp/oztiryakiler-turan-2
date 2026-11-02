@@ -48,16 +48,21 @@ export function DarkBg() {
 }
 
 /** İç sayfa başlığı – tam genişlik koyu bant, header ile aynı hizada */
-export function PageTop({ kicker, title, lead, crumbs, children }: { kicker?: string; title: string; lead?: string; crumbs: { name: string; path: string }[]; children?: React.ReactNode }) {
+export function PageTop({ kicker, title, lead, crumbs, children, aside }: { kicker?: string; title: string; lead?: string; crumbs: { name: string; path: string }[]; children?: React.ReactNode; aside?: React.ReactNode }) {
+  const text = (
+    <div className="min-w-0">
+      <Crumbs items={crumbs} dark />
+      {kicker && <p className="mt-5 inline-flex rounded-full bg-sun px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink">{kicker}</p>}
+      <h1 className="mt-3 max-w-4xl text-[32px] font-extrabold leading-[1.08] sm:text-[46px]">{title}</h1>
+      {lead && <p className="mt-4 max-w-3xl text-[17px] leading-relaxed text-white/75">{lead}</p>}
+      {children}
+    </div>
+  );
   return (
     <section className="relative overflow-hidden bg-ink text-white">
       <DarkBg />
       <div className="wrap relative py-10 sm:py-14">
-        <Crumbs items={crumbs} dark />
-        {kicker && <p className="mt-5 inline-flex rounded-full bg-sun px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink">{kicker}</p>}
-        <h1 className="mt-3 max-w-4xl text-[32px] font-extrabold leading-[1.08] sm:text-[46px]">{title}</h1>
-        {lead && <p className="mt-4 max-w-3xl text-[17px] leading-relaxed text-white/75">{lead}</p>}
-        {children}
+        {aside ? <div className="grid items-center gap-8 lg:grid-cols-[1fr_400px] lg:gap-12">{text}{aside}</div> : text}
       </div>
     </section>
   );
