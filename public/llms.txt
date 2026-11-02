@@ -1,0 +1,13 @@
+# Öztiryakiler Teknik Servis
+
+> İstanbul Avrupa Yakası'nda Öztiryakiler marka ticari mutfak ekipmanlarına arıza onarımı ve periyodik bakım hizmeti veren bağımsız teknik servis (yetkili servis değildir). Sitede cihaz bazında arıza rehberleri bulunur.
+
+Servis hattı / WhatsApp: 0534 748 61 07
+
+## Bölümler
+- Servisler: /servis (ocak, yer ocağı, buzdolabı, fritöz, benmari, fırın, pizza fırını, makarna haşlama, ızgara, bulaşık makinesi)
+- Arıza rehberi: /ariza-rehberi
+- Sektörler: /sektorler (restoran, otel, kurumsal yemekhane, pastane, fast food, catering)
+- Periyodik bakım: /periyodik-bakim
+- Servis ücreti: /servis-ucreti
+- Hizmet bölgesi: /hizmet-bolgesi

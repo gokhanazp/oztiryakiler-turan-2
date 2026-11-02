@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Manrope – self-hosted */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("/fonts/manrope-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("/fonts/manrope-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  --color-paper: #f5f2ea;
+  --color-paper-2: #ece7db;
+  --color-ink: #17191c;
+  --color-ink-2: #23262b;
+  --color-ink-3: #33373e;
+  --color-mute: #5d6168;
+  --color-line: #ddd7c9;
+  --color-sun: #ffc21a;
+  --color-sun-2: #f0ad00;
+  --color-sun-soft: #fff3cc;
+  --color-moss: #1f5f4a;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --radius-box: 6px;
+}
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { @apply bg-paper text-ink antialiased; }
+h1, h2, h3 { text-wrap: balance; letter-spacing: -0.02em; }
+
+@utility wrap {
+  @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+}
+@utility kicker {
+  @apply inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-mute;
+}
+@utility kicker-dot {
+  @apply inline-block h-2 w-2 bg-sun;
+}
+@utility b-sun {
+  @apply inline-flex items-center justify-center gap-2 rounded-[10px] bg-sun px-5 py-3 text-[15px] font-extrabold text-ink transition hover:bg-sun-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink;
+}
+@utility b-ink {
+  @apply inline-flex items-center justify-center gap-2 rounded-[10px] bg-ink px-5 py-3 text-[15px] font-bold text-white transition hover:bg-ink-3;
+}
+@utility b-line {
+  @apply inline-flex items-center justify-center gap-2 rounded-[10px] border-2 border-ink bg-white px-5 py-2.5 text-[15px] font-bold text-ink transition hover:bg-ink hover:text-white;
+}
+@utility b-wa {
+  @apply inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#1fa855] px-5 py-3 text-[15px] font-bold text-white transition hover:bg-[#178a45];
+}
+@utility card {
+  @apply rounded-[14px] border border-line bg-white;
+}
+@utility panel {
+  @apply rounded-[16px] border-2 border-ink bg-white shadow-[5px_5px_0_#17191c];
+}
+@utility panel-dark {
+  @apply rounded-[16px] border-2 border-ink bg-ink text-white shadow-[5px_5px_0_#ffc21a];
+}
+@utility sec {
+  @apply py-10 sm:py-14;
+}
+@utility hl {
+  background: linear-gradient(transparent 62%, var(--color-sun) 62%, var(--color-sun) 92%, transparent 92%);
+}
+
+details > summary::-webkit-details-marker { display: none; }
+details[open] .q-plus { transform: rotate(45deg); }
+
+.prose-guide h2 { @apply mt-10 text-2xl font-extrabold text-ink; }
+.prose-guide p { @apply mt-4 leading-[1.8] text-ink-3; }
+.prose-guide ul { @apply mt-4 space-y-2; }
+.prose-guide li { @apply relative pl-6 leading-[1.7] text-ink-3; }
+.prose-guide li::before { content: ""; @apply absolute left-0 top-[0.7em] h-2 w-2 bg-sun; }
