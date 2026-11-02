@@ -6,7 +6,7 @@ import { allDistricts } from "@/data/regions";
 import { site, waLink } from "@/config/site";
 import { meta, qaLd } from "@/lib/seo";
 import { DarkBand, DarkBg, DeviceRows, Ld, Note, QAList, SectionTitle, TrustRow } from "@/components/ui";
-import QuickRequest from "@/components/QuickRequest";
+import HeroSlider from "@/components/HeroSlider";
 import { DevIcon, IArrow, IBook, ICal, ICheck, IPhone, IPin, ITool, IWa } from "@/components/icons";
 import type { QA } from "@/data/devices";
 
@@ -18,7 +18,7 @@ export const metadata = meta({
 });
 
 const steps = [
-  { t: "Arızayı anlatın", d: "Telefon, WhatsApp veya hızlı talep formuyla cihazı, belirtiyi ve adresi iletin." },
+  { t: "Arızayı anlatın", d: "Telefon, WhatsApp veya iletişim formuyla cihazı, belirtiyi ve adresi iletin." },
   { t: "Teknisyen yola çıkar", d: "Size en yakın ekip, arızaya uygun parçalarla yönlendirilir." },
   { t: "Tespit ve fiyat onayı", d: "Arıza ölçümle bulunur; ücreti öğrenmeden işlem başlamaz." },
   { t: "Onarım, test, teslim", d: "Cihaz önünüzde çalıştırılır; faturalı ve garantili teslim edilir." },
@@ -39,7 +39,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink text-white">
         <DarkBg />
-        <div className="wrap relative grid gap-10 pb-24 pt-12 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:pb-28 lg:pt-16">
+        <div className="wrap relative grid gap-10 pb-24 pt-12 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-14 lg:pb-28 lg:pt-16">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] font-semibold text-white/85">
               <span className="h-2 w-2 animate-pulse rounded-full bg-[#2ecc71]" /> {site.region}&apos;nda yerinde servis
@@ -61,7 +61,7 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <QuickRequest />
+          <HeroSlider />
         </div>
       </section>
 
